@@ -158,3 +158,31 @@ p {
     padding: .5rem;
 
 }
+.logoImage{
+  /* width: 40%;
+  height:580px; */
+  
+  margin-top: 10%;
+  width: 90%;
+  /* margin-left: 55%;
+  display:block; */
+}
+.header-color{
+  height:100px;
+
+}
+.navRef{
+  font-size: 500%;
+}
+.mdl-navigation__link{
+
+  font-size: 30;
+}
+#navRef{
+  font-size: 30;
+
+}
+
+.navRef2{
+  font-size: 50;
+}

@@ -5,6 +5,9 @@ import Conditional from "./components/conditional"
 import Main from './components/main';
 import axios from "axios"
 import {Link} from 'react-router-dom';
+const fontSize2 = 20;
+const marginTopValue = 10;
+
 
 class App extends Component {
   state = {
@@ -61,28 +64,31 @@ logout = () => {
       <div className="demo-big-content">
     <Layout>
           <Conditional if={this.state.loggedIn===true}>
-          <Header className="header-color" title={<Link style={{textDecoration: 'none', color: 'white'}} to="/">DreamJob</Link>} scroll>
-            <Navigation>
-              <Link to="/search">Search</Link>
-              <Link to="/userForm">Track an Application</Link>
-              <Link to="/applications">My Applications</Link>
-              <Link to="/about">About Us</Link>
-              <Link to="/contact">Contact</Link>
-              <Link to="/login" onClick={this.logout}>Logout</Link>
+          <Header className="header-color" title={<Link style={{ textDecoration: 'none', color: 'white' }} to="/">
+              <img src="/images/logo100.png" className="logoImage" alt="logo"></img></Link>} scroll>
+            <Navigation className="navRef">
+              <Link style={{ fontSize: fontSize2, marginTop : marginTopValue }} to="/search">Search</Link>
+              <Link style={{ fontSize: fontSize2, marginTop : marginTopValue }} to="/userForm">Track an Application</Link>
+              <Link style={{ fontSize: fontSize2, marginTop : marginTopValue }} to="/applications">My Applications</Link>
+              <Link style={{ fontSize: fontSize2, marginTop : marginTopValue }} to="/about">About Us</Link>
+              <Link style={{ fontSize: fontSize2, marginTop : marginTopValue }} to="/contact">Contact</Link>
+              <Link style={{ fontSize: fontSize2, marginTop : marginTopValue }} to="/login" onClick={this.logout}>Logout</Link>
             </Navigation>
             </Header>
           </Conditional>
           <Conditional if={this.state.loggedIn===false}>
-            <Header className="header-color" title={<Link style={{ textDecoration: 'none', color: 'white' }} to="/">DreamJob</Link>} scroll>
-              <Navigation>
-                <Link to="/register">Register Today</Link>
-                <Link to="/login">Log In</Link>
-                <Link to="/about">About Us</Link>
-                <Link to="/contact">Contact</Link>
+            <Header className="header-color" title={<Link style={{ textDecoration: 'none', color: 'white' }} to="/">
+              <img src="/images/logo100.png" className="logoImage" alt="logo"></img></Link>} scroll>
+              <Navigation >
+                <Link style={{ fontSize: fontSize2, marginTop : marginTopValue }} to="/register">Register Today</Link>
+                <Link style={{ fontSize: fontSize2, marginTop : marginTopValue }} to="/login">Log In</Link>
+                <Link style={{ fontSize: fontSize2, marginTop : marginTopValue }} to="/about">About Us</Link>
+                <Link style={{ fontSize: fontSize2, marginTop : marginTopValue }} to="/contact">Contact</Link>
               </Navigation>
             </Header>
           </Conditional>
-          <Drawer title={<Link style={{textDecoration: 'none', color: 'black'}} to="/">DreamJob</Link>}>
+          <Drawer title={<Link style={{ textDecoration: 'none', color: 'white' }} to="/">
+              <img src="/images/logo100.png" className="logoImage" alt="logo"></img></Link>}>
           <Conditional if={this.state.loggedIn===true}>
             <Navigation>
                 <Link to="/search">Search</Link>
