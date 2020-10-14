@@ -26,7 +26,7 @@ class Landing extends React.Component {
         </Row>
 
         </div>
-        <h3>Your Career Upgrade Starts Here.</h3>
+        <h3>Your Career Upgrade Starts Here.....</h3>
         <Link to="/register"><Button>Register</Button></Link>
         <Link to="/login">Already a member? Click to log in.</Link>
       </div>
