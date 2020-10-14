@@ -13,13 +13,11 @@ class Landing extends React.Component {
         <Row>
           <Card className="cardLandingPage2" style={{borderStyle:"none", width: "35%", backgroundColor: "transparent", paddingTop: 200 }} >
             <Card.Body>
-              <Card.Title style={{ fontSize:60 }}>We Make Dreams Come True</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
+              <Card.Title style={{ fontSize:60 }}>We Make Your Dreams Come True</Card.Title>
+              <Card.Text style={{fontSize:20}}>
+                ATW makes it much easier for you to find your dream school all Around the World!
               </Card.Text>
-              <Card.Link href="#">Card Link</Card.Link>
-              <Card.Link href="#">Another Link</Card.Link>
+              <Card.Link style={{fontSize:17, color: "aqua", float: 'right', marginRight: 55}} href="#">Discover How It Works...</Card.Link>
             </Card.Body>
           </Card>
           <div className="cardLandingPageImage" style={{textAlign: 'right'}}>
