@@ -67,12 +67,12 @@ logout = () => {
           <Header className="color-header" title={<Link style={{fontStyle: 'italic',fontFamily:'lucida grande',textDecoration: 'none', color: 'white' }} to="/">
               <img src="/images/logo400.png" className="logoImage" alt="logo"></img>Around The World</Link>} scroll>
             <Navigation className="navRef">
-              <Link style={{ fontSize: fontSize2, marginTop : marginTopValue }} to="/search">Search</Link>
-              <Link style={{ fontSize: fontSize2, marginTop : marginTopValue }} to="/userForm">Track an Application</Link>
-              <Link style={{ fontSize: fontSize2, marginTop : marginTopValue }} to="/applications">My Applications</Link>
-              <Link style={{ fontSize: fontSize2, marginTop : marginTopValue }} to="/about">About Us</Link>
-              <Link style={{ fontSize: fontSize2, marginTop : marginTopValue }} to="/contact">Contact</Link>
-              <Link style={{ fontSize: fontSize2, marginTop : marginTopValue }} to="/login" onClick={this.logout}>Logout</Link>
+              <Link style={{ fontWeight:"bold", fontSize: fontSize2, marginTop : marginTopValue }} to="/search">Search</Link>
+              <Link style={{ fontWeight:"bold",fontSize: fontSize2, marginTop : marginTopValue }} to="/userForm">Track an Application</Link>
+              <Link style={{ fontWeight:"bold",fontSize: fontSize2, marginTop : marginTopValue }} to="/applications">My Applications</Link>
+              <Link style={{ fontWeight:"bold",fontSize: fontSize2, marginTop : marginTopValue }} to="/about">About Us</Link>
+              <Link style={{ fontWeight:"bold",fontSize: fontSize2, marginTop : marginTopValue }} to="/contact">Contact</Link>
+              <Link style={{ fontWeight:"bold",fontSize: fontSize2, marginTop : marginTopValue }} to="/login" onClick={this.logout}>Logout</Link>
             </Navigation>
             </Header>
           </Conditional>
@@ -80,10 +80,10 @@ logout = () => {
             <Header className="color-header" title={<Link style={{fontStyle: 'italic', fontFamily:'lucida grande', textDecoration: 'none', color: 'white' }} to="/">
               <img src="/images/logo400.png" className="logoImage" alt="logo"></img> Around The World </Link> }  scroll>
               <Navigation >
-                <Link style={{ fontSize: fontSize2, marginTop : marginTopValue }} to="/register">Register Today</Link>
-                <Link style={{ fontSize: fontSize2, marginTop : marginTopValue }} to="/login">Log In</Link>
-                <Link style={{ fontSize: fontSize2, marginTop : marginTopValue }} to="/about">About Us</Link>
-                <Link style={{ fontSize: fontSize2, marginTop : marginTopValue }} to="/contact">Contact</Link>
+                <Link style={{ fontWeight:"bold",fontSize: fontSize2, marginTop : marginTopValue }} to="/register">Register Today</Link>
+                <Link style={{ fontWeight:"bold",fontSize: fontSize2, marginTop : marginTopValue }} to="/login">Log In</Link>
+                <Link style={{ fontWeight:"bold",fontSize: fontSize2, marginTop : marginTopValue }} to="/about">About Us</Link>
+                <Link style={{ fontWeight:"bold",fontSize: fontSize2, marginTop : marginTopValue }} to="/contact">Contact</Link>
               </Navigation>
             </Header>
           </Conditional>
