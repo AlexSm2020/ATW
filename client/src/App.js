@@ -87,10 +87,10 @@ logout = () => {
               </Navigation>
             </Header>
           </Conditional>
-          <Drawer title={<Link style={{ textDecoration: 'none', color: 'white' }} to="/">
+          <Drawer className="color-header2" title={<Link style={{ textDecoration: 'none', color: 'white' }} to="/">
               <img src="/images/logo400.png" className="logoImage" alt="logo"></img></Link>}>
           <Conditional if={this.state.loggedIn===true}>
-            <Navigation>
+            <Navigation >
                 <Link to="/search">Search</Link>
                 <Link to="/userForm">Track an Application</Link>
                 <Link to="/applications">My Applications</Link>
@@ -100,7 +100,7 @@ logout = () => {
             </Navigation>
           </Conditional>
           <Conditional if={this.state.loggedIn === false}>
-                <Navigation>
+                <Navigation >
                 <Link to="/about">About Us</Link>
                 <Link to="/register">Register Today</Link>
                 <Link to="/login">Log In</Link>
