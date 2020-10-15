@@ -64,8 +64,8 @@ logout = () => {
       <div className="demo-big-content">
     <Layout>
           <Conditional if={this.state.loggedIn===true}>
-          <Header className="header-color" title={<Link style={{ textDecoration: 'none', color: 'white' }} to="/">
-              <img src="/images/logo100.png" className="logoImage" alt="logo"></img></Link>} scroll>
+          <Header className="color-header" title={<Link style={{fontStyle: 'italic',fontFamily:'lucida grande',textDecoration: 'none', color: 'white' }} to="/">
+              <img src="/images/logo400.png" className="logoImage" alt="logo"></img>Around The World</Link>} scroll>
             <Navigation className="navRef">
               <Link style={{ fontSize: fontSize2, marginTop : marginTopValue }} to="/search">Search</Link>
               <Link style={{ fontSize: fontSize2, marginTop : marginTopValue }} to="/userForm">Track an Application</Link>
@@ -77,8 +77,8 @@ logout = () => {
             </Header>
           </Conditional>
           <Conditional if={this.state.loggedIn===false}>
-            <Header className="header-color" title={<Link style={{ textDecoration: 'none', color: 'white' }} to="/">
-              <img src="/images/logo100.png" className="logoImage" alt="logo"></img></Link>} scroll>
+            <Header className="color-header" title={<Link style={{fontStyle: 'italic', fontFamily:'lucida grande', textDecoration: 'none', color: 'white' }} to="/">
+              <img src="/images/logo400.png" className="logoImage" alt="logo"></img> Around The World </Link> }  scroll>
               <Navigation >
                 <Link style={{ fontSize: fontSize2, marginTop : marginTopValue }} to="/register">Register Today</Link>
                 <Link style={{ fontSize: fontSize2, marginTop : marginTopValue }} to="/login">Log In</Link>
@@ -88,7 +88,7 @@ logout = () => {
             </Header>
           </Conditional>
           <Drawer title={<Link style={{ textDecoration: 'none', color: 'white' }} to="/">
-              <img src="/images/logo100.png" className="logoImage" alt="logo"></img></Link>}>
+              <img src="/images/logo400.png" className="logoImage" alt="logo"></img></Link>}>
           <Conditional if={this.state.loggedIn===true}>
             <Navigation>
                 <Link to="/search">Search</Link>

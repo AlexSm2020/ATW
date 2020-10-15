@@ -158,9 +158,10 @@ html {
 
 /* CSS for Landing Page */
 .cardLandingPage {
-	/* background: rgb(142, 188, 240); */
-	background-image: url("sky3.jpg");
-	background-repeat: no-repeat;
+	background: #000046;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
 	
 }
 .cardLandingPage2 {
@@ -177,10 +178,10 @@ html {
 	
 }
 .cardLandingPageImage {
-	padding-left: 0%; 
-	padding-right: 10%;
-	width: 60%;
-	height:580px;
+	padding-left: 15%; 
+	padding-right: 0%;
+	width: 50%;
+	height:auto;
 	margin-left: 0%;
 	margin-right: 0%;
 
