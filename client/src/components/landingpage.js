@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom'
 import { Card, Row } from 'react-bootstrap';
 import Cards from '../components/Cards';
 
+
 class Landing extends React.Component {
 
   render() {
 
     return (
-      <div className="container2" id="landing-container2">
+      <div className="container2" >
         <div className="cardLandingPage">
           <Row>
             <Card className="cardLandingPage2" style={{ borderStyle: "none", width: "35%", backgroundColor: "transparent", paddingTop: 200 }} >
@@ -25,19 +26,52 @@ class Landing extends React.Component {
           </Row>
 
         </div>
+
         <Cards />
 
-        <Card className="bg-dark text-white">
-          <Card.Img src="/images/img-2.jpg" alt="Card image" />
-          <Card.ImgOverlay>
-            <Card.Title>Card title</Card.Title>
-            <Card.Text>
-              This is a wider card with supporting text below as a natural lead-in to
-              additional content. This content is a little bit longer.
+        <div className="row2" >
+          <div className="column2">
+            <Card className="lastCard" style={{ height: 500, width: 500, borderRadius: 500 }}>
+              <Card.Img style={{ height: 500, width: 500, borderRadius: 500 }} src="/images/students.jpg" alt="Card image" />
+              <Card.ImgOverlay style={{ height: 300, width: 300, borderRadius: 500, display: "block", marginLeft: "auto", marginRight: "auto", marginTop: 20 }}>
+                <Card.Title>Welcome to School</Card.Title>
+                <Card.Text>
+                  No worries... We will send you all the required information regarding your registration process and orientation. 
              </Card.Text>
-            <Card.Text>Last updated 3 mins ago</Card.Text>
-          </Card.ImgOverlay>
-        </Card>
+                <Card.Text></Card.Text>
+              </Card.ImgOverlay>
+            </Card>
+          </div>
+          <div className="column2" style={{ alignContent:"space-evenly"}}>
+            <Card className="lastCard" style={{ height: 500, width: 500, borderRadius: 500 }}>
+              <Card.Img style={{ height: 500, width: 500, borderRadius: 500 }} src="/images/scholarship.png" alt="Card image" />
+              <Card.ImgOverlay style={{ height: 300, width: 300, borderRadius: 500, display: "block", marginLeft: "auto", marginRight: "auto", marginTop: 20 }}>
+                <Card.Title>Looking for scholarship?</Card.Title>
+                <Card.Text>
+                  Our professional consultants will help you to find what fits you and you future major! 
+             </Card.Text>
+                <Card.Text></Card.Text>
+              </Card.ImgOverlay>
+            </Card>
+          </div>
+          <div className="column2">
+            <Card className="lastCard" style={{ float: "left", height: 500, width: 500, borderRadius: 500 }}>
+              <Card.Img style={{ height: 500, width: 500, borderRadius: 500 }} src="/images/move.jpg" alt="Card image" />
+              <Card.ImgOverlay style={{ height: 300, width: 300, borderRadius: 500, display: "block", marginLeft: "auto", marginRight: "auto", marginTop: 20 }}>
+                <Card.Title style={{marginTop:200, color:"darkblue"}}>Free temporary accommodation</Card.Title>
+                <Card.Text>
+                  We understand how hard it is to start your life in a new country. We may able to find a temporary place to live.  
+              </Card.Text>
+                <Card.Text>Last updated 3 mins ago</Card.Text>
+              </Card.ImgOverlay>
+            </Card>
+          </div>
+        </div>
+        
+
+
+
+
         <h3>Your Career Upgrade Starts Here.....</h3>
         <Link to="/register"><Button>Register</Button></Link>
         <Link to="/login">Already a member? Click to log in.</Link>
@@ -48,3 +82,4 @@ class Landing extends React.Component {
 
 
 export default Landing;
+ 
