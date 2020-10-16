@@ -67,6 +67,20 @@ class Landing extends React.Component {
             </Card>
           </div>
         </div>
+        <div className="cardLandingPage">
+          <Row>
+            <Card className="cardLandingPage2" style={{ borderStyle: "none", width: "35%", backgroundColor: "transparent", paddingTop: 200 }} >
+              <Card.Body>
+                <Card.Title style={{ fontSize: 60 }}>We Make Your Dreams Come True</Card.Title>
+                <Card.Text style={{ fontSize: 22 }}>
+                  ATW makes it much easier for you to find your dream school all Around The World!
+              </Card.Text>
+                <Card.Link style={{ fontSize: 27, color: "indigo", float: 'right', marginRight: 55 }} href="#aref">Discover How It Works...</Card.Link>
+              </Card.Body>
+            </Card>
+          </Row>
+
+        </div>
         
 
 
