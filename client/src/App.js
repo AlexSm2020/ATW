@@ -5,6 +5,7 @@ import Conditional from "./components/conditional"
 import Main from './components/main';
 import axios from "axios"
 import {Link} from 'react-router-dom';
+
 const fontSize2 = 20;
 const marginTopValue = 10;
 
@@ -77,7 +78,7 @@ logout = () => {
             </Header>
           </Conditional>
           <Conditional if={this.state.loggedIn===false}>
-            <Header className="color-header" title={<Link style={{fontStyle: 'italic', fontFamily:'lucida grande', textDecoration: 'none', color: 'white' }} to="/">
+            <Header className="color-header" title={<Link style={{fontStyle: 'italic',marginTop:55, paddingTop:55, fontFamily:'lucida grande', textDecoration: 'none', color: 'white' }} to="/">
               <img src="/images/logo400.png" className="logoImage" alt="logo"></img> Around The World </Link> }  scroll>
               <Navigation >
                 <Link style={{ fontWeight:"bold",fontSize: fontSize2, marginTop : marginTopValue }} to="/register">Register Today</Link>

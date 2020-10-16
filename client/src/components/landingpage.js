@@ -26,6 +26,18 @@ class Landing extends React.Component {
 
         </div>
         <Cards />
+
+        <Card className="bg-dark text-white">
+          <Card.Img src="/images/img-2.jpg" alt="Card image" />
+          <Card.ImgOverlay>
+            <Card.Title>Card title</Card.Title>
+            <Card.Text>
+              This is a wider card with supporting text below as a natural lead-in to
+              additional content. This content is a little bit longer.
+             </Card.Text>
+            <Card.Text>Last updated 3 mins ago</Card.Text>
+          </Card.ImgOverlay>
+        </Card>
         <h3>Your Career Upgrade Starts Here.....</h3>
         <Link to="/register"><Button>Register</Button></Link>
         <Link to="/login">Already a member? Click to log in.</Link>

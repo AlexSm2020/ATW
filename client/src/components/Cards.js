@@ -18,7 +18,7 @@ function Cards() {
             <CardItem
               src='images/uni2.png'
               text='Our experts will prepar a list of universities that matches your desires and qualifications. Then you will choose which ones you are intersted to apply!'
-              label='Step 2 = Receive your options '
+              label='Step 2 = Review and apply '
               path='/services'
             />
           </ul>
@@ -42,10 +42,14 @@ function Cards() {
               path='/sign-up'
             />
           </ul>
-
         </div>
       </div>
+      
+
     </div>
+
+ 
+    
 
 
 
