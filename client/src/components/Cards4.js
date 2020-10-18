@@ -4,7 +4,7 @@ import CardItem from './CardItem4';
 
 function Cards4() {
   return (
-    <div className='cards'>
+    <div className='cards4'>
       {/* <h1 id="aref">You have our support to start your education in your dream school.</h1> */}
       <div className='cards__container14'>
         <div className='cards__wrapper'>

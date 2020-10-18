@@ -1,4 +1,4 @@
-.cards {
+.cards4 {
     padding-top: 4rem;
     background: #fff;
     background: #FFEEEE;  /* fallback for old browsers */
@@ -145,4 +145,10 @@
       margin-bottom: 2rem;
     }
   }
-  
+  @media (min-width:0px) and (max-width:750px) {
+    .cards__container14 {
+      margin-top: 10%;
+    }
+      
+
+  }

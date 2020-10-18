@@ -10,14 +10,17 @@ h4 {
     background-size: cover;
 }
 .cards__item__img3{
-    height: 500px;
-    width: auto;
+    min-width: 35rem;
+    max-width: 98rem;
+    height: 30rem;
+    position: relative;
 }
 .cards__item__img4{
     width: 80%;
-    height: 70px;
+    height: 80px;
     padding-top: 1.5%;
     padding-left: 1%;
+    padding-bottom: 1%;
     background: #00c6ff;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top,#0099ff, #ddd6f3);
@@ -49,16 +52,21 @@ h4 {
 }
 
 
+
 .row{
     width: 100%;
 
     margin-top: 0%;
 }
+.row88{
 
-.row{
+    display: flex;
+    margin-top: 90px;
 
-    margin-top: 0%;
+
 }
+
+
 
 .card-block3{
     margin-top: 175px;
@@ -76,3 +84,36 @@ h4 {
     padding-left: 80%;
 }
 
+@media only screen and (min-width: 1200px) {
+    .content__blog__container {
+      width: 84%;
+    }
+  }
+
+  
+  @media (min-width:0px) and (max-width:770px) {
+    .card-img-bottom {
+      display: none;
+    }
+    .cards__item__img4{
+        height: 110px;
+        padding-top: 0.5%;
+      }
+
+  }
+  @media (min-width:770px) and (max-width:1040px) {
+
+    .row88{
+        height: 110px;
+        padding-top: 0;
+        margin-top: 20px;
+      }
+
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    .cards__item {
+      margin-bottom: 2rem;
+    }
+  }
+  

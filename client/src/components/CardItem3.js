@@ -28,7 +28,7 @@ function CardItem3(props) {
         </div>
 
 
-        <div className="row" style={{marginTop:90, borderRadius:"20px", color:"blue"}}>
+        <div className="row88"  >
           <div className='cards__item__img4'>
           <h2 id="aref">You have our support to start your education in your future dream school.</h2>
           </div>
