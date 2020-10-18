@@ -1,0 +1,78 @@
+h4 {
+    color: rgb(160, 15, 15);
+    font-size: 50;
+  }
+
+.card-img-bottom {
+
+    height: 5rem;
+    background: center no-repeat;
+    background-size: cover;
+}
+.cards__item__img3{
+    height: 500px;
+    width: auto;
+}
+.cards__item__img4{
+    width: 80%;
+    height: 70px;
+    padding-top: 1.5%;
+    padding-left: 1%;
+    background: #00c6ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top,#0099ff, #ddd6f3);
+    border-radius:15px ;
+    color:white;
+}
+#aref{
+    color: white;
+}
+
+
+.card-title3{
+    font-size: large;
+}  
+.card-text1{
+    font-size: 60;
+
+
+}
+.card{
+    border-style:none;
+    border: blue;
+    margin-left: 0%;
+    height: 500px;
+    width: 100%;
+    background: #00c6ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right,#0099ff, #0072ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+.row{
+    width: 100%;
+
+    margin-top: 0%;
+}
+
+.row{
+
+    margin-top: 0%;
+}
+
+.card-block3{
+    margin-top: 175px;
+
+    font-size: 50;
+}
+
+
+.cards__items3{
+    width: 100%;
+    padding-left: 0%;
+}
+.cards__items4{
+    width: 100%;
+    padding-left: 80%;
+}
+

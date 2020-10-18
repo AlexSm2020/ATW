@@ -1,9 +1,8 @@
 .cards {
-  padding: 4rem;
   background: #fff;
   background: #FFEEEE;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #DDEFBB, #FFEEEE);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #cdcfca, #FFEEEE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to right, #DDEFBB, #FFEEEE);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #cdcfca, #FFEEEE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 .big__cards{
@@ -28,9 +27,9 @@ h1 {
   margin: 0 auto;
 }
 
-.cards__wrapper {
+.cards__wrapper1 {
   position: relative;
-  margin: 50px 0 45px;
+  margin: 0px 0 45px;
 }
 .cards__wrapper2 {
   
@@ -68,7 +67,7 @@ h1 {
 .cards__item__pic-wrap {
   position: relative;
   width: 100%;
-  padding-top: 67%;
+
   overflow: hidden;
 }
 
@@ -81,14 +80,20 @@ h1 {
   content: attr(data-category);
   position: absolute;
   bottom: 0;
-  margin-left: 10px;
+
+
+  margin-left: 1px;
   padding: 6px 8px;
   max-width: calc((100%) - 60px);
   font-size: 12px;
   font-weight: 700;
   color: #fff;
-  background-color: #1f98f4;
+  background: #00c6ff;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   box-sizing: border-box;
+  border-radius: 80px;
 }
 
 .cards__item__img {
