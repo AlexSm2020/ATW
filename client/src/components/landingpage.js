@@ -7,6 +7,7 @@ import Cards2 from '../components/Cards2';
 import Cards3 from '../components/Cards3';
 import Cards4 from '../components/Cards4';
 import Footer from '../components/Footer';
+import Cards5 from './Cards5';
 
 
 class Landing extends React.Component {
@@ -15,11 +16,13 @@ class Landing extends React.Component {
 
     return (
       <div className="container2" >
-        <Cards3 />
+        <Cards5 />
+        
         <Cards4 />
         <Cards />
         <Cards2 />
         <Footer />
+        
       </div>
     );
   }
