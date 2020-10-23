@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText } from 'reactstrap';
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 import axios from "axios"
 
 
@@ -25,35 +25,36 @@ class Applications extends Component {
         }
     }
 
-    render () {
+    render() {
         return (
             <div>
                 <h4 className="applicationsHeader">My Applications</h4>
-            <div>
-            <ListGroup>
-                {
-                    this.state.applications.map(application => {
-                        return (<ListGroupItem>
+                <div>
+                    <ListGroup>
+                        {
+                            this.state.applications.map(application => {
+                                return (
+                                <ListGroupItem>
                                     <Link to={{
                                         pathname: "/singleApplication",
                                         state: {
                                             application: application
                                         }
                                     }}>
-                                    <ListGroupItemHeading>{application.nationality}</ListGroupItemHeading>
+                                        <ListGroupItemHeading>{application.nationality}</ListGroupItemHeading>
                                     </Link>
-                                        <ListGroupItemText>
-                                            Company Name: {application.company}
-                                        </ListGroupItemText>
-                                        <ListGroupItemText>
-                                            Status: {application.highestEducation}
-                                        </ListGroupItemText>
+                                    <ListGroupItemText>
+                                        Company Name: {application.company}
+                                    </ListGroupItemText>
+                                    <ListGroupItemText>
+                                        Status: {application.highestEducation}
+                                    </ListGroupItemText>
                                 </ListGroupItem>)
-                    })
-                }
+                            })
+                        }
 
-            </ListGroup>
-            </div >
+                    </ListGroup>
+                </div >
             </div >
         )
     }

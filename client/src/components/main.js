@@ -11,11 +11,14 @@ import UserForm from './userForm'
 import Applications from './applications';
 import SingleApplication from './singleApplication';
 import PrivateRoute from "./privateRoute";
+import Footer from "./footer/Footer"
+
 
 function Main(props) {
   return (
+    <>
     <Switch>
-    <Route exact path="/" component={props.loggedIn === false ? LandingPage : Search} />
+    <Route exact path="/" component={props.loggedIn === false ? LandingPage : Applications} />
     <Route exact path="/about" component={About} />
     <Route exact path="/contact" component={Contact} />
     <Route exact path="/login" component={LogIn} />
@@ -25,6 +28,8 @@ function Main(props) {
     <PrivateRoute exact path="/applications" component={Applications} />
     <PrivateRoute exact path="/singleApplication" component={SingleApplication} />
   </Switch>
+  <Footer/>
+  </>
 
   )
 }
