@@ -70,10 +70,17 @@ export class StepForm extends Component {
                 this.setState({
                     [input]: e.label
                 })
-        }else{
+        }
+        else if ((typeof e === "object") && (input ==="countryOfEducation")) {
+            this.setState({
+                [input]: e.label
+            })
+        }
+        else{
             this.setState({[input]: e.target.value});
         }
     }
+    countryOfEducation
 
     showStep = () => {
         const { step, highestEducation,applicationName, countryOfInterest,englishExam, nationality, gradeAverage, countryOfEducation, visa, GREgrade, GMATgrade,GRE,GMAT, englishExamGrade, notes } = this.state;

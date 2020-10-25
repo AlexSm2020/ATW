@@ -62,16 +62,18 @@ class JobDetails_1 extends Component {
 
                 <h3>Tell us more about yourself:</h3>
                 <label>
+                <label>Choose a name for your application! </label>
                     <input
                         type="text"
-                        name="Choose a name for your application"
+                        name="applicationName"
                         value={applicationName}
                         onChange={handleChange('applicationName')}
-                        placeholder="applicationName"
+                        placeholder="Application Name!"
+                        
                     />
                 </label>
-                <h5>What is your nationality?</h5>
-                <label>
+                <div className="form-group">
+                    <label>What is your nationality?</label>
                     <Select className="nationality-input"
                         options={options}
                         placeholder={nationality} 
@@ -82,26 +84,37 @@ class JobDetails_1 extends Component {
                         defaultValue = {nationality}
                     >
                     </Select>
-                </label>
+                </div>
+                <div className="form-group">
+                    <label>What is the country of your education?</label>
+                    <Select className="nationality-input"
+                        options={options}
+                        placeholder={countryOfEducation} 
+                        value={countryOfEducation}
+                        name="countryOfEducation"
+                        type="country"
+                        onChange={handleChange('countryOfEducation')}
+                        defaultValue = {countryOfEducation}
+                    >
+                    </Select>
+                </div>
+                <div className="form-group">
+                    <label>Which country are you planning to apply?</label>
+                    <select className="form-control" name="countryOfInterest"  value={countryOfInterest} onChange={this.props.handleChange('countryOfInterest')}>
 
-                <label>
-                    <input
-                        type="text"
-                        name="countryOfInterest"
-                        value={countryOfInterest}
-                        onChange={handleChange('countryOfInterest')}
-                        placeholder="Which country are you planning to apply?"
-                    />
-                </label>
-                <label>
-                    <input
-                        type="text"
-                        name="visa"
-                        value={visa}
-                        onChange={handleChange('visa')}
-                        placeholder="Do you have visa?"
-                    />
-                </label>
+                        <option>United States</option>
+                        <option>Canada</option>
+                        <option>Australia</option>
+                    </select>
+                </div>
+                <div className="form-group">
+                    <label>Do you have Visa?</label>
+                    <select className="form-control" name="visa"  value={visa} onChange={this.props.handleChange('visa')}>
+
+                        <option>Yes</option>
+                        <option>No, I will apply later</option>
+                    </select>
+                </div>
 
                 <label>
                     <input
@@ -113,15 +126,7 @@ class JobDetails_1 extends Component {
                     />
                 </label>
 
-                <label>
-                    <input
-                        type="text"
-                        name="gradeAverage"
-                        value={countryOfEducation}
-                        onChange={handleChange('countryOfEducation')}
-                        placeholder="countryOfEducation"
-                    />
-                </label>
+
 
 
                 <button className="Next" onClick={this.continue}>

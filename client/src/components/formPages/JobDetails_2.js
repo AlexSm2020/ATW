@@ -67,7 +67,10 @@ class JobDetails_2 extends Component {
                         )}
                     </Step>
                 </ProgressBar>
+                <label >
                 <h3>Enter your job information:</h3>
+                </label>
+                
                 <div className="form-group">
                     <label>highest Education</label>
                     <select className="form-control" name="highestEducation"  value={highestEducation} onChange={this.props.handleChange('highestEducation')}>
