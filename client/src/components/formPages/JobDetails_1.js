@@ -15,7 +15,7 @@ class JobDetails_1 extends Component {
     }
 
     render() {
-        const { applicationName, nationality, gradeAverage,countryOfInterest, countryOfEducation, visa, handleChange } = this.props;
+        const { applicationName, nationality,countryOfInterest, countryOfEducation, visa, handleChange } = this.props;
  
         return (
             <div className="application-form">
@@ -57,6 +57,7 @@ class JobDetails_1 extends Component {
                         )}
                     </Step>
                 </ProgressBar>
+                <label></label>
 
 
 
@@ -102,6 +103,7 @@ class JobDetails_1 extends Component {
                     <label>Which country are you planning to apply?</label>
                     <select className="form-control" name="countryOfInterest"  value={countryOfInterest} onChange={this.props.handleChange('countryOfInterest')}>
 
+                    <option>Please select an option</option>
                         <option>United States</option>
                         <option>Canada</option>
                         <option>Australia</option>
@@ -111,23 +113,11 @@ class JobDetails_1 extends Component {
                     <label>Do you have Visa?</label>
                     <select className="form-control" name="visa"  value={visa} onChange={this.props.handleChange('visa')}>
 
+                        <option>Please select an option</option>
                         <option>Yes</option>
                         <option>No, I will apply later</option>
                     </select>
                 </div>
-
-                <label>
-                    <input
-                        type="text"
-                        name="gradeAverage"
-                        value={gradeAverage}
-                        onChange={handleChange('gradeAverage')}
-                        placeholder="gradeAverage"
-                    />
-                </label>
-
-
-
 
                 <button className="Next" onClick={this.continue}>
                     Next »

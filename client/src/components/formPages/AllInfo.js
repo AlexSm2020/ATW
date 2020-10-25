@@ -18,10 +18,12 @@ class AllInfo extends Component {
             applicationName: data.applicationName,
             nationality: data.nationality,
             countryOfEducation: data.countryOfEducation,
-            countryOfInterest:data.countryOfInterest,
+            countryOfInterest: data.countryOfInterest,
+            visa: data.visa,
             highestEducation: data.highestEducation,
             gradeAverage: data.gradeAverage,
-            visa: data.visa,
+            futureMajor: data.futureMajor,
+            major: data.major,
             englishExam: data.englishExam,
             GRE: data.GRE,
             GMAT: data.GMAT,
@@ -43,7 +45,7 @@ class AllInfo extends Component {
     }
 
     render(){
-        const { highestEducation,applicationName, englishExam,countryOfInterest, nationality, gradeAverage, countryOfEducation, visa, GREgrade, GMATgrade, GRE, GMAT, englishExamGrade, notes  } = this.props;
+        const { highestEducation,applicationName,major,futureMajor, englishExam,countryOfInterest, nationality, gradeAverage, countryOfEducation, visa, GREgrade, GMATgrade, GRE, GMAT, englishExamGrade, notes  } = this.props;
         return(
             <div className="application-form">
                                 <ProgressBar percent={100}>
@@ -88,18 +90,20 @@ class AllInfo extends Component {
 
                 Application Name: <b>{applicationName}</b><br />
                 Nationality: <b>{nationality}</b><br />
-                Average GPA: <b>{gradeAverage}</b><br />
                 Country of Education: <b>{countryOfEducation}</b><br />
-                Interested Country:<b>{countryOfInterest}</b><br />
+                Interested Country: <b>{countryOfInterest}</b><br />
+                Visa:  <b>{visa}</b><br />
+                Major: <b>{major}</b><br />
+                Highest Education: <b>{highestEducation}</b><br />
+                Average GPA: <b>{gradeAverage}</b><br />
+                Future Program/Degree: <b>{futureMajor}</b><br />
                 English Exam: <b>{englishExam}</b><br />
-                highest Education: <b>{highestEducation}</b><br />
-                Visa: <b>{visa}</b><br />
+                Englis Exam Grade: <b>{englishExamGrade}</b><br />
+                GRE: <b>{GRE}</b><br />
                 GRE Grade: <b>{GREgrade}</b><br />
-                GMAT grade:<b>{GMATgrade}</b><br />
-                GRE:<b>{GRE}</b><br />
-                GMAT:<b>{GMAT}</b><br />
-                englis Exam Grade:<b>{englishExamGrade}</b><br />
-                Extra Notes:<b>{notes}</b><br />
+                GMAT: <b>{GMAT}</b><br />
+                GMAT grade: <b>{GMATgrade}</b><br />
+                Extra Notes: <b>{notes}</b><br />
                 <button className="Back" onClick={this.back}>
                     « Make Changes
                 </button>

@@ -41,13 +41,13 @@ class Applications extends Component {
                                             application: application
                                         }
                                     }}>
-                                        <ListGroupItemHeading>{application.nationality}</ListGroupItemHeading>
+                                        <ListGroupItemHeading>{application.applicationName}</ListGroupItemHeading>
                                     </Link>
                                     <ListGroupItemText>
-                                        Company Name: {application.company}
+                                        Future Country: {application.countryOfInterest}
                                     </ListGroupItemText>
                                     <ListGroupItemText>
-                                        Status: {application.highestEducation}
+                                        programm/degree: {application.futureMajor}
                                     </ListGroupItemText>
                                 </ListGroupItem>)
                             })

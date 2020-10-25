@@ -24,8 +24,10 @@ class JobDetails_2 extends Component {
         this.props.prevStep();
     }
 
+
+
     render(){
-        const { highestEducation, englishExam, GREgrade, GMATgrade, handleChange } = this.props;
+        const { major, highestEducation, gradeAverage,futureMajor, handleChange } = this.props;
         const defaultOption = options[0];
         return(
             <div className="application-form">
@@ -67,47 +69,50 @@ class JobDetails_2 extends Component {
                         )}
                     </Step>
                 </ProgressBar>
-                <label >
-                <h3>Enter your job information:</h3>
+                <label></label>
+
+                <label>
+                <label>What is your major?</label>
+                    <input
+                        type="text"
+                        name="major"
+                        value={major}
+                        onChange={handleChange('major')}
+                        placeholder="major"
+                    />
+                </label>
+        
+                <label>
+                <label>What is your highest educational degree?</label>
+                    <input
+                        type="text"
+                        name="highestEducation"
+                        value={highestEducation}
+                        onChange={handleChange('highestEducation')}
+                        placeholder="Your last degree earned"
+                    />
                 </label>
                 
-                <div className="form-group">
-                    <label>highest Education</label>
-                    <select className="form-control" name="highestEducation"  value={highestEducation} onChange={this.props.handleChange('highestEducation')}>
-
-                        <option>Pre-application</option>
-                        <option>Submitted Application</option>
-                        <option>Interview</option>
-                        <option>Assessment</option>
-                        <option>Offered</option>
-                        <option>Accepted Offer</option>
-                    </select>
-                </div>
-                <div className="form-group">
-                    <label>English Exam</label>
-                    <select className="form-control" name="englishExam"  value={englishExam} onChange={this.props.handleChange('englishExam')}>
-
-                        <option>englishExam</option>
-                        <option>englishExam2</option>
-                        <option>englishExam3</option>
-                        <option>englishExam4</option>
-                    </select>
-                </div>
-                <div className="form-group">
-                    <label>GRE grade</label>
-                    <select className="form-control" name="GREgrade"  value={GREgrade} onChange={handleChange('GREgrade')}>
-
-                        <option>In-GREgrade</option>
-                        <option>GREgrade1</option>
-                        <option>GREgrade 2</option>
-                        <option>GREgrade 3</option>
-                        <option>GREgrade 4</option>
-                    </select>
-                </div>
                 <label>
-                    <label>GMAT grade</label>
-                    <Input className="date-input" defaultValue={GMATgrade} onChange={this.props.handleChange('GMATgrade')} type="date" bsSize="lg" name="GMATgrade" className="taskDueDate"></Input>
- 
+                <label>What is your GPA for the highest educational degree?</label>
+                    <input
+                        type="text"
+                        name="gradeAverage"
+                        value={gradeAverage}
+                        onChange={handleChange('gradeAverage')}
+                        placeholder="gradeAverage"
+                    />
+                </label>
+                
+                <label>
+                <label>Which programm/degree are you planing to apply for?</label>
+                    <input
+                        type="text"
+                        name="futureMajor"
+                        value={futureMajor}
+                        onChange={handleChange('futureMajor')}
+                        placeholder="future degree"
+                    />
                 </label>
                 
                 <button className="Back" onClick={this.back}>

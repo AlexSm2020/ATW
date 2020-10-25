@@ -8,34 +8,35 @@ export class StepForm extends Component {
     state = {
         step: 1,
         // step 1
-        applicationName:"",
+        applicationName: "",
         nationality: '',
         gradeAverage: '',
         countryOfEducation: '',
-        countryOfInterest:'',
+        countryOfInterest: '',
         
 
         // step 2
-        visa:'',
+        visa: '',
         highestEducation: '',
         englishExam: '',
 
         //step 3
         GREgrade: '',
         GMATgrade: '',
-        GRE:'',
-        GMAT:'',
+        GRE: '',
+        GMAT: '',
         englishExamGrade: '',
+        futureMajor: '',
+        major: '',
         notes: ''
     }
 
     componentDidMount() {
         if (this.props.location.state) {
             this.setState({
-                jobTitle: this.props.location.state.application[0].jobTitle,
-                gradeAverage: this.props.location.state.application[0].gradeAverage,
-                countryOfEducation: this.props.location.state.application[0].countryOfEducation,
-                visa: this.props.location.state.application[0].visa,
+                applicationName: this.props.location.state.application[0].applicationName,
+                countryOfInterest: this.props.location.state.application[0].countryOfInterest,
+                futureMajor: this.props.location.state.application[0].futureMajor,
             })
         } 
     }
@@ -83,18 +84,18 @@ export class StepForm extends Component {
     countryOfEducation
 
     showStep = () => {
-        const { step, highestEducation,applicationName, countryOfInterest,englishExam, nationality, gradeAverage, countryOfEducation, visa, GREgrade, GMATgrade,GRE,GMAT, englishExamGrade, notes } = this.state;
+        const { step, highestEducation,applicationName, major, futureMajor, countryOfInterest,englishExam, nationality, gradeAverage, countryOfEducation, visa, GREgrade, GMATgrade,GRE,GMAT, englishExamGrade, notes } = this.state;
 
         if(step === 1)
             return (<JobDetails_1 
                 nextStep = {this.nextStep} 
                 handleChange = {this.handleChange} 
+
                 applicationName = {applicationName}
                 nationality={nationality} 
-                gradeAverage={gradeAverage}
                 countryOfEducation={countryOfEducation}
-                visa={visa}
                 countryOfInterest={countryOfInterest}
+                visa={visa}
 
                 
             />);
@@ -103,8 +104,12 @@ export class StepForm extends Component {
                 nextStep={this.nextStep}
                 prevStep={this.prevStep}
                 handleChange={this.handleChange}
+
+                major={major}
                 highestEducation={highestEducation}
-                englishExam={englishExam}
+                gradeAverage={gradeAverage}
+                futureMajor={futureMajor}
+                
 
             />);
         if (step === 3)
@@ -112,14 +117,14 @@ export class StepForm extends Component {
                 nextStep={this.nextStep}
                 prevStep={this.prevStep}
                 handleChange={this.handleChange}
+
+                englishExam={englishExam}
+                englishExamGrade={englishExamGrade}
                 GREgrade={GREgrade}
                 GMATgrade={GMATgrade}
-                notes={notes}
                 GRE={GRE}
-                englishExamGrade={englishExamGrade}
                 GMAT={GMAT}
-
-
+                notes={notes}
             />);
         if(step === 4)
             return (<AllInfo 
@@ -139,6 +144,8 @@ export class StepForm extends Component {
                 englishExamGrade={englishExamGrade}
                 GMAT={GMAT}
                 countryOfInterest={countryOfInterest}
+                major={major}
+                futureMajor={futureMajor}
                 prevStep = {this.prevStep}
             />);
     }

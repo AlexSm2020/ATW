@@ -44,7 +44,13 @@ const ApplicationSchema = new Schema({
         type: String
     },
     GMATgrade: {
-        type: Date
+        type: String
+    },
+    major: {
+        type: String
+    },
+    futureMajor: {
+        type: String
     },
 
     lastCommDescription: {

@@ -113,6 +113,8 @@ router.post("/startApplication", async function (req, res) {
             GMATgrade: req.body.GMATgrade,
             countryOfInterest: req.body.countryOfInterest,
             notes: req.body.notes,
+            major: req.body.major,
+            futureMajor: req.body.futureMajor
 
         }
 
