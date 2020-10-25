@@ -25,7 +25,7 @@ class JobDetails_2 extends Component {
     }
 
     render(){
-        const { status, interest, LastComm, LastCommDate, handleChange } = this.props;
+        const { highestEducation, englishExam, GREgrade, GMATgrade, handleChange } = this.props;
         const defaultOption = options[0];
         return(
             <div className="application-form">
@@ -70,7 +70,7 @@ class JobDetails_2 extends Component {
                 <h3>Enter your job information:</h3>
                 <div className="form-group">
                     <label>highest Education</label>
-                    <select className="form-control" name="status"  value={status} onChange={this.props.handleChange('status')}>
+                    <select className="form-control" name="highestEducation"  value={highestEducation} onChange={this.props.handleChange('highestEducation')}>
 
                         <option>Pre-application</option>
                         <option>Submitted Application</option>
@@ -82,28 +82,28 @@ class JobDetails_2 extends Component {
                 </div>
                 <div className="form-group">
                     <label>English Exam</label>
-                    <select className="form-control" name="interest"  value={interest} onChange={this.props.handleChange('interest')}>
+                    <select className="form-control" name="englishExam"  value={englishExam} onChange={this.props.handleChange('englishExam')}>
 
-                        <option>Highly Interested</option>
-                        <option>Interested</option>
-                        <option>Neutral</option>
-                        <option>Not Interested</option>
+                        <option>englishExam</option>
+                        <option>englishExam2</option>
+                        <option>englishExam3</option>
+                        <option>englishExam4</option>
                     </select>
                 </div>
                 <div className="form-group">
                     <label>GRE grade</label>
-                    <select className="form-control" name="LastComm"  value={LastComm} onChange={handleChange('LastComm')}>
+                    <select className="form-control" name="GREgrade"  value={GREgrade} onChange={handleChange('GREgrade')}>
 
-                        <option>In-Person</option>
-                        <option>Email</option>
-                        <option>Phone Call</option>
-                        <option>Video Call</option>
-                        <option>Text</option>
+                        <option>In-GREgrade</option>
+                        <option>GREgrade1</option>
+                        <option>GREgrade 2</option>
+                        <option>GREgrade 3</option>
+                        <option>GREgrade 4</option>
                     </select>
                 </div>
                 <label>
                     <label>GMAT grade</label>
-                    <Input className="date-input" defaultValue={LastCommDate} onChange={this.props.handleChange('LastCommDate')} type="date" bsSize="lg" name="LastCommDate" className="taskDueDate"></Input>
+                    <Input className="date-input" defaultValue={GMATgrade} onChange={this.props.handleChange('GMATgrade')} type="date" bsSize="lg" name="GMATgrade" className="taskDueDate"></Input>
  
                 </label>
                 

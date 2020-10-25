@@ -15,18 +15,19 @@ class AllInfo extends Component {
         e.preventDefault();
         // PROCESS FORM //
         const appPayload = {
-            nationality: data.jobTitle,
-            countryOfEducation: data.jobLocation,
+            applicationName: data.applicationName,
+            nationality: data.nationality,
+            countryOfEducation: data.countryOfEducation,
             countryOfInterest:data.countryOfInterest,
-            highestEducation: data.status,
-            gradeAverage: data.jobCompany,
-            visa: data.jobAdURL,
-            englishExam: data.interest,
-            GRE: data.poc,
-            GMAT: data.pocEmail,
-            englishExamGrade: data.pocPhone,
-            GREgrade: data.lastComm,
-            GMATgrade: data.lastCommDate,
+            highestEducation: data.highestEducation,
+            gradeAverage: data.gradeAverage,
+            visa: data.visa,
+            englishExam: data.englishExam,
+            GRE: data.GRE,
+            GMAT: data.GMAT,
+            englishExamGrade: data.englishExamGrade,
+            GREgrade: data.GREgrade,
+            GMATgrade: data.GMATgrade,
             notes: data.notes    
         }
 
@@ -42,7 +43,7 @@ class AllInfo extends Component {
     }
 
     render(){
-        const { status,interest,countryOfInterest, jobTitle, jobCompany, jobLocation, jobAdURL, LastComm, LastCommDate, poc, pocEmail, pocPhone, notes  } = this.props;
+        const { highestEducation,applicationName, englishExam,countryOfInterest, nationality, gradeAverage, countryOfEducation, visa, GREgrade, GMATgrade, GRE, GMAT, englishExamGrade, notes  } = this.props;
         return(
             <div className="application-form">
                                 <ProgressBar percent={100}>
@@ -85,18 +86,19 @@ class AllInfo extends Component {
                 </ProgressBar>
                 <h4>Here is the information you entered:</h4>
 
-                Nationality: <b>{jobTitle}</b><br />
-                Average GPA: <b>{jobCompany}</b><br />
-                Country of Education: <b>{jobLocation}</b><br />
+                Application Name: <b>{applicationName}</b><br />
+                Nationality: <b>{nationality}</b><br />
+                Average GPA: <b>{gradeAverage}</b><br />
+                Country of Education: <b>{countryOfEducation}</b><br />
                 Interested Country:<b>{countryOfInterest}</b><br />
-                English Exam: <b>{interest}</b><br />
-                highest Education: <b>{status}</b><br />
-                Visa: <b>{jobAdURL}</b><br />
-                GRE Grade: <b>{LastComm}</b><br />
-                GMAT grade:<b>{LastCommDate}</b><br />
-                GRE:<b>{poc}</b><br />
-                GMAT:<b>{pocEmail}</b><br />
-                englis Exam Grade:<b>{pocPhone}</b><br />
+                English Exam: <b>{englishExam}</b><br />
+                highest Education: <b>{highestEducation}</b><br />
+                Visa: <b>{visa}</b><br />
+                GRE Grade: <b>{GREgrade}</b><br />
+                GMAT grade:<b>{GMATgrade}</b><br />
+                GRE:<b>{GRE}</b><br />
+                GMAT:<b>{GMAT}</b><br />
+                englis Exam Grade:<b>{englishExamGrade}</b><br />
                 Extra Notes:<b>{notes}</b><br />
                 <button className="Back" onClick={this.back}>
                     « Make Changes

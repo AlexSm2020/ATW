@@ -17,7 +17,7 @@ class JobDetails_3 extends Component {
     }
 
     render() {
-        const { notes, poc, pocEmail, pocPhone, handleChange } = this.props;
+        const { notes, GRE, GMAT, englishExamGrade, handleChange } = this.props;
         return (
             <div className="application-form">
                 <ProgressBar percent={75}>
@@ -63,27 +63,27 @@ class JobDetails_3 extends Component {
                 <label className="lable1">
                     <input
                         type="text"
-                        name="poc"
-                        value={poc}
-                        onChange={handleChange('poc')}
+                        name="GRE"
+                        value={GRE}
+                        onChange={handleChange('GRE')}
                         placeholder="GRE"
                     />
                 </label>
                 <label>
                     <input
                         type="text"
-                        name="pocEmail"
-                        value={pocEmail}
-                        onChange={handleChange('pocEmail')}
+                        name="GMAT"
+                        value={GMAT}
+                        onChange={handleChange('GMAT')}
                         placeholder="GMAT"
                     />
                 </label>
                 <label>
                     <PhoneInput className="phone-input"
                         placeholder="englis Exam Grade"
-                        value={pocPhone}
-                        name="pocPhone"
-                        onChange={handleChange('pocPhone')}
+                        value={englishExamGrade}
+                        name="englishExamGrade"
+                        onChange={handleChange('englishExamGrade')}
                         defaultCountry="US"
                     >
                     </PhoneInput>

@@ -49,9 +49,15 @@ label{
     border-radius: 5px;
     width: 83%;
     padding: 1rem;
+}
+
+.nationality-input{
+    color:  #2980b9;
     border-color: #2980b9;
-
-
+    border-width: 2px;
+    border-radius: 5px;
+    width: 83%;
+    padding: 1rem;
 }
 
 .indexedStep {

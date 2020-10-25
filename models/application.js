@@ -4,6 +4,11 @@ const Schema = mongoose.Schema;
 
 const ApplicationSchema = new Schema({
 
+    applicationName: {
+        type: String,
+        required: true
+    },
+
     nationality: {
         type: String,
         required: true

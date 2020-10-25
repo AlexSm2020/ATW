@@ -8,23 +8,24 @@ export class StepForm extends Component {
     state = {
         step: 1,
         // step 1
-        jobTitle: '',
-        jobCompany: '',
-        jobLocation: '',
+        applicationName:"",
+        nationality: '',
+        gradeAverage: '',
+        countryOfEducation: '',
         countryOfInterest:'',
         
 
         // step 2
-        jobAdURL:'',
-        status: '',
-        interest: '',
+        visa:'',
+        highestEducation: '',
+        englishExam: '',
 
         //step 3
-        LastComm: '',
-        LastCommDate: '',
-        poc:'',
-        pocEmail:'',
-        pocPhone: '',
+        GREgrade: '',
+        GMATgrade: '',
+        GRE:'',
+        GMAT:'',
+        englishExamGrade: '',
         notes: ''
     }
 
@@ -32,9 +33,9 @@ export class StepForm extends Component {
         if (this.props.location.state) {
             this.setState({
                 jobTitle: this.props.location.state.application[0].jobTitle,
-                jobCompany: this.props.location.state.application[0].jobCompany,
-                jobLocation: this.props.location.state.application[0].jobLocation,
-                jobAdURL: this.props.location.state.application[0].jobAdURL,
+                gradeAverage: this.props.location.state.application[0].gradeAverage,
+                countryOfEducation: this.props.location.state.application[0].countryOfEducation,
+                visa: this.props.location.state.application[0].visa,
             })
         } 
     }
@@ -62,10 +63,10 @@ export class StepForm extends Component {
         }
         else if (typeof e === "string") {
             this.setState({
-                pocPhone: e
+                englishExamGrade: e
             })
         }
-        else if ((typeof e === "object") && (input ==="jobTitle")) {
+        else if ((typeof e === "object") && (input ==="nationality")) {
                 this.setState({
                     [input]: e.label
                 })
@@ -75,18 +76,17 @@ export class StepForm extends Component {
     }
 
     showStep = () => {
-        const { step, status,countryOfInterest,interest, jobTitle, jobCompany, jobLocation, jobAdURL, LastComm, LastCommDate,poc,pocEmail, pocPhone, notes } = this.state;
+        const { step, highestEducation,applicationName, countryOfInterest,englishExam, nationality, gradeAverage, countryOfEducation, visa, GREgrade, GMATgrade,GRE,GMAT, englishExamGrade, notes } = this.state;
 
         if(step === 1)
             return (<JobDetails_1 
                 nextStep = {this.nextStep} 
                 handleChange = {this.handleChange} 
-                // firstName={firstName} 
-                // lastName={lastName}
-                jobTitle={jobTitle} 
-                jobCompany={jobCompany}
-                jobLocation={jobLocation}
-                jobAdURL={jobAdURL}
+                applicationName = {applicationName}
+                nationality={nationality} 
+                gradeAverage={gradeAverage}
+                countryOfEducation={countryOfEducation}
+                visa={visa}
                 countryOfInterest={countryOfInterest}
 
                 
@@ -96,8 +96,8 @@ export class StepForm extends Component {
                 nextStep={this.nextStep}
                 prevStep={this.prevStep}
                 handleChange={this.handleChange}
-                status={status}
-                interest={interest}
+                highestEducation={highestEducation}
+                englishExam={englishExam}
 
             />);
         if (step === 3)
@@ -105,12 +105,12 @@ export class StepForm extends Component {
                 nextStep={this.nextStep}
                 prevStep={this.prevStep}
                 handleChange={this.handleChange}
-                LastComm={LastComm}
-                LastCommDate={LastCommDate}
+                GREgrade={GREgrade}
+                GMATgrade={GMATgrade}
                 notes={notes}
-                poc={poc}
-                pocPhone={pocPhone}
-                pocEmail={pocEmail}
+                GRE={GRE}
+                englishExamGrade={englishExamGrade}
+                GMAT={GMAT}
 
 
             />);
@@ -118,18 +118,19 @@ export class StepForm extends Component {
             return (<AllInfo 
                 // firstName={firstName} 
                 // lastName={lastName}
-                status={status} 
-                interest={interest}
-                jobTitle={jobTitle} 
-                jobCompany={jobCompany}
-                jobLocation={jobLocation}
-                jobAdURL={jobAdURL}
-                LastComm={LastComm}
-                LastCommDate={LastCommDate}
+                applicationName = {applicationName}
+                highestEducation={highestEducation} 
+                englishExam={englishExam}
+                nationality={nationality} 
+                gradeAverage={gradeAverage}
+                countryOfEducation={countryOfEducation}
+                visa={visa}
+                GREgrade={GREgrade}
+                GMATgrade={GMATgrade}
                 notes={notes}
-                poc={poc}
-                pocPhone={pocPhone}
-                pocEmail={pocEmail}
+                GRE={GRE}
+                englishExamGrade={englishExamGrade}
+                GMAT={GMAT}
                 countryOfInterest={countryOfInterest}
                 prevStep = {this.prevStep}
             />);

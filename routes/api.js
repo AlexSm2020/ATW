@@ -99,6 +99,7 @@ router.post("/startApplication", async function (req, res) {
     try {
         
         const application = {
+            applicationName:req.body.applicationName,
             nationality: req.body.nationality,
             countryOfEducation: req.body.countryOfEducation,
             highestEducation: req.body.highestEducation,
