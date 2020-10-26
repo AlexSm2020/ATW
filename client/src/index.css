@@ -298,10 +298,61 @@ html {
 }
 
 /* CSS for Applications View */
+.APPLICATIONS{
+	background: #c2e59c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #197dca, #667a52); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+padding: 5% 5% 15% 5%;
+
+}
+.applicationsHeader1{
+	color: cornsilk;
+	text-align: center;
+	font-size: 24px;
+	margin-bottom: 4px;
+}
 
 .applicationsHeader {
 	text-align: center;
+	color: rgb(255, 255, 255);
+	margin-top: 5%;
+	font-size: 34px;
 }
+
+.APPLICATIONS_cards{
+	border-color: green;
+	
+}
+.ListGroup{
+	border-color: green;
+
+}
+.linkBTN{
+
+	
+}
+.appBTN{
+	cursor: pointer;
+	background-color: white;
+	color: rgb(39, 114, 212);
+	border-radius: 10px;
+	border-color: rgb(39, 114, 212);
+	font-size: 15;
+	font-weight: bold;
+	padding: 15px;
+	margin-top: 20px;
+	border-width: 5px;
+	
+}
+
+.appBTN:hover{
+	background-color: rgb(117, 145, 61);
+	color: white;
+	border-color: rgb(8, 54, 10);
+}
+
+
 
 /* CSS for Single Application View */
 

@@ -27,14 +27,24 @@ class Applications extends Component {
 
     render() {
         return (
-            <div>
+            <div className="APPLICATIONS">
+                <h6 className="applicationsHeader1">Tell us about yourself. let us know what exaclty you are looking for by answering some simple questions.  </h6>
+                <h6 className="applicationsHeader1">Here, you can make as many applications as you want. You may make multiple applications depending your needs!  </h6>
+                <h6 className="applicationsHeader1">You may modify your applications later by login to your account.  </h6>
+                <h6 className="applicationsHeader1"> 
+               <Link to='/userForm' className="linkBTN">
+                    <button className="appBTN">
+                        Add an Application
+                </button>
+                </Link>
+                </h6>
                 <h4 className="applicationsHeader">My Applications</h4>
-                <div>
-                    <ListGroup>
+                <div className="APPLICATIONS_cards"  >
+                    <ListGroup >
                         {
                             this.state.applications.map(application => {
                                 return (
-                                <ListGroupItem>
+                                <ListGroupItem className="APPLICATIONS_cards_items" style={{borderColor:"rgb(39, 114, 212)", width:"40%", marginLeft:"auto", marginRight:"auto"}}>
                                     <Link to={{
                                         pathname: "/singleApplication",
                                         state: {
