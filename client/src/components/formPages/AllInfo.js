@@ -19,6 +19,7 @@ class AllInfo extends Component {
             nationality: data.nationality,
             countryOfEducation: data.countryOfEducation,
             countryOfInterest: data.countryOfInterest,
+            stateOfInterest: data.stateOfInterest,
             visa: data.visa,
             highestEducation: data.highestEducation,
             gradeAverage: data.gradeAverage,
@@ -30,6 +31,7 @@ class AllInfo extends Component {
             englishExamGrade: data.englishExamGrade,
             GREgrade: data.GREgrade,
             GMATgrade: data.GMATgrade,
+            schoolOfInterest: data.schoolOfInterest,
             notes: data.notes    
         }
 
@@ -45,7 +47,7 @@ class AllInfo extends Component {
     }
 
     render(){
-        const { highestEducation,applicationName,major,futureMajor, englishExam,countryOfInterest, nationality, gradeAverage, countryOfEducation, visa, GREgrade, GMATgrade, GRE, GMAT, englishExamGrade, notes  } = this.props;
+        const { highestEducation,applicationName,major,futureMajor, englishExam,countryOfInterest, stateOfInterest, nationality, gradeAverage, countryOfEducation, visa, GREgrade, GMATgrade, GRE, GMAT, englishExamGrade, schoolOfInterest, notes  } = this.props;
         return(
             <div className="application-form">
                                 <ProgressBar percent={100}>
@@ -86,12 +88,14 @@ class AllInfo extends Component {
                         )}
                     </Step>
                 </ProgressBar>
+                <label></label>
                 <h4>Here is the information you entered:</h4>
 
                 Application Name: <b>{applicationName}</b><br />
                 Nationality: <b>{nationality}</b><br />
                 Country of Education: <b>{countryOfEducation}</b><br />
                 Interested Country: <b>{countryOfInterest}</b><br />
+                Interested States: <b>{stateOfInterest}</b><br />
                 Visa:  <b>{visa}</b><br />
                 Major: <b>{major}</b><br />
                 Highest Education: <b>{highestEducation}</b><br />
@@ -102,7 +106,8 @@ class AllInfo extends Component {
                 GRE: <b>{GRE}</b><br />
                 GRE Grade: <b>{GREgrade}</b><br />
                 GMAT: <b>{GMAT}</b><br />
-                GMAT grade: <b>{GMATgrade}</b><br />
+                GMAT Grade: <b>{GMATgrade}</b><br />
+                preferred Schools:  <b>{schoolOfInterest}</b><br />
                 Extra Notes: <b>{notes}</b><br />
                 <button className="Back" onClick={this.back}>
                     « Make Changes

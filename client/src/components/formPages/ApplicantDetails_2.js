@@ -13,7 +13,7 @@ const options = [
 
 ];
 
-class JobDetails_2 extends Component {
+class ApplicantDetails_2 extends Component {
     continue = e => {
         e.preventDefault();
         this.props.nextStep();
@@ -79,6 +79,7 @@ class JobDetails_2 extends Component {
                         value={major}
                         onChange={handleChange('major')}
                         placeholder="major"
+                        maxLength="30"
                     />
                 </label>
         
@@ -90,6 +91,7 @@ class JobDetails_2 extends Component {
                         value={highestEducation}
                         onChange={handleChange('highestEducation')}
                         placeholder="Your last degree earned"
+                        maxLength="30"
                     />
                 </label>
                 
@@ -101,6 +103,7 @@ class JobDetails_2 extends Component {
                         value={gradeAverage}
                         onChange={handleChange('gradeAverage')}
                         placeholder="gradeAverage"
+                        maxLength="30"
                     />
                 </label>
                 
@@ -112,6 +115,7 @@ class JobDetails_2 extends Component {
                         value={futureMajor}
                         onChange={handleChange('futureMajor')}
                         placeholder="future degree"
+                        maxLength="30"
                     />
                 </label>
                 
@@ -126,4 +130,4 @@ class JobDetails_2 extends Component {
     }
 }
 
-export default JobDetails_2;
+export default ApplicantDetails_2;

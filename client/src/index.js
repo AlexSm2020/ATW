@@ -8,7 +8,6 @@ import 'react-mdl/extra/material.js';
 import { BrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css'; // or include from a CDN
-import 'react-bootstrap-country-select/dist/react-bootstrap-country-select.css';
 
 ReactDOM.render(
     <BrowserRouter>

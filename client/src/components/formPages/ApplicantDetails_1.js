@@ -8,14 +8,14 @@ import countryList from 'react-select-country-list'
 
 const options = countryList().getData()
 
-class JobDetails_1 extends Component {
+class ApplicantDetails_1 extends Component {
     continue = e => {
         e.preventDefault();
         this.props.nextStep();
     }
 
     render() {
-        const { applicationName, nationality,countryOfInterest, countryOfEducation, visa, handleChange } = this.props;
+        const { applicationName, nationality,countryOfInterest, stateOfInterest, countryOfEducation, visa, handleChange } = this.props;
  
         return (
             <div className="application-form">
@@ -70,6 +70,7 @@ class JobDetails_1 extends Component {
                         value={applicationName}
                         onChange={handleChange('applicationName')}
                         placeholder="Application Name!"
+                        maxLength="30"
                         
                     />
                 </label>
@@ -109,8 +110,21 @@ class JobDetails_1 extends Component {
                         <option>Australia</option>
                     </select>
                 </div>
+                <label>
+                <label>Do you have any states you prefer to move? (write up to 8 states) </label>
+                    <input
+                        type="text"
+                        name="stateOfInterest"
+                        value={stateOfInterest}
+                        onChange={handleChange('stateOfInterest')}
+                        placeholder="States of interest"
+                        maxLength="50"
+                        
+                    />
+                </label>
+
                 <div className="form-group">
-                    <label>Do you have Visa?</label>
+                    <label>Do you have a valid Visa?</label>
                     <select className="form-control" name="visa"  value={visa} onChange={this.props.handleChange('visa')}>
 
                         <option>Please select an option</option>
@@ -127,4 +141,4 @@ class JobDetails_1 extends Component {
     }
 }
 
-export default JobDetails_1;
+export default ApplicantDetails_1;

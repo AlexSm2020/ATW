@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import JobDetails_1 from './formPages/JobDetails_1';
-import JobDetails_2 from './formPages/JobDetails_2';
-import JobDetails_3 from './formPages/JobDetails_3';
+import ApplicantDetails_1 from './formPages/ApplicantDetails_1';
+import ApplicantDetails_2 from './formPages/ApplicantDetails_2';
+import ApplicantDetails_3 from './formPages/ApplicantDetails_3';
 import AllInfo from './formPages/AllInfo';
 
 export class StepForm extends Component {
@@ -13,6 +13,7 @@ export class StepForm extends Component {
         gradeAverage: '',
         countryOfEducation: '',
         countryOfInterest: '',
+        stateOfInterest: '',
         
 
         // step 2
@@ -28,6 +29,7 @@ export class StepForm extends Component {
         englishExamGrade: '',
         futureMajor: '',
         major: '',
+        schoolOfInterest: '',
         notes: ''
     }
 
@@ -84,10 +86,10 @@ export class StepForm extends Component {
     countryOfEducation
 
     showStep = () => {
-        const { step, highestEducation,applicationName, major, futureMajor, countryOfInterest,englishExam, nationality, gradeAverage, countryOfEducation, visa, GREgrade, GMATgrade,GRE,GMAT, englishExamGrade, notes } = this.state;
+        const { step, highestEducation,applicationName, major, futureMajor, countryOfInterest,stateOfInterest, englishExam, nationality, gradeAverage, countryOfEducation, visa, GREgrade, GMATgrade,GRE,GMAT, englishExamGrade,schoolOfInterest, notes } = this.state;
 
         if(step === 1)
-            return (<JobDetails_1 
+            return (<ApplicantDetails_1 
                 nextStep = {this.nextStep} 
                 handleChange = {this.handleChange} 
 
@@ -95,12 +97,13 @@ export class StepForm extends Component {
                 nationality={nationality} 
                 countryOfEducation={countryOfEducation}
                 countryOfInterest={countryOfInterest}
+                stateOfInterest = {stateOfInterest}
                 visa={visa}
 
                 
             />);
         if (step === 2)
-            return (<JobDetails_2
+            return (<ApplicantDetails_2
                 nextStep={this.nextStep}
                 prevStep={this.prevStep}
                 handleChange={this.handleChange}
@@ -113,7 +116,7 @@ export class StepForm extends Component {
 
             />);
         if (step === 3)
-            return (<JobDetails_3
+            return (<ApplicantDetails_3
                 nextStep={this.nextStep}
                 prevStep={this.prevStep}
                 handleChange={this.handleChange}
@@ -124,6 +127,7 @@ export class StepForm extends Component {
                 GMATgrade={GMATgrade}
                 GRE={GRE}
                 GMAT={GMAT}
+                schoolOfInterest= {schoolOfInterest}
                 notes={notes}
             />);
         if(step === 4)
@@ -136,10 +140,12 @@ export class StepForm extends Component {
                 nationality={nationality} 
                 gradeAverage={gradeAverage}
                 countryOfEducation={countryOfEducation}
+                stateOfInterest={stateOfInterest}
                 visa={visa}
                 GREgrade={GREgrade}
                 GMATgrade={GMATgrade}
                 notes={notes}
+                schoolOfInterest={schoolOfInterest}
                 GRE={GRE}
                 englishExamGrade={englishExamGrade}
                 GMAT={GMAT}

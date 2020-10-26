@@ -19,6 +19,9 @@ const ApplicationSchema = new Schema({
     countryOfInterest: {
         type: String
     },
+    stateOfInterest: {
+        type: String
+    },
     highestEducation: {
         type: String
     },
@@ -53,7 +56,7 @@ const ApplicationSchema = new Schema({
         type: String
     },
 
-    lastCommDescription: {
+    schoolOfInterest: {
         type: String
     },
     // Any notes that the user would like to add regarding this job application.

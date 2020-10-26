@@ -112,8 +112,10 @@ router.post("/startApplication", async function (req, res) {
             GREgrade: req.body.GREgrade,
             GMATgrade: req.body.GMATgrade,
             countryOfInterest: req.body.countryOfInterest,
+            stateOfInterest: req.body.stateOfInterest,
             notes: req.body.notes,
             major: req.body.major,
+            schoolOfInterest: req.body.schoolOfInterest,
             futureMajor: req.body.futureMajor
 
         }

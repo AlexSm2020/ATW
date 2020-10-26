@@ -5,7 +5,7 @@ import './form.css';
 import PhoneInput from "react-phone-number-input"
 
 
-class JobDetails_3 extends Component {
+class ApplicantDetails_3 extends Component {
     continue = e => {
         e.preventDefault();
         this.props.nextStep();
@@ -17,7 +17,7 @@ class JobDetails_3 extends Component {
     }
 
     render() {
-        const { englishExam, englishExamGrade, GRE, GREgrade, GMAT,GMATgrade, notes, handleChange } = this.props;
+        const { englishExam, englishExamGrade, GRE, GREgrade, GMAT,GMATgrade, schoolOfInterest, notes, handleChange } = this.props;
         return (
             <div className="application-form">
                 <ProgressBar percent={75}>
@@ -80,6 +80,7 @@ class JobDetails_3 extends Component {
                         value={englishExamGrade}
                         onChange={handleChange('englishExamGrade')}
                         placeholder="english exam overall score"
+                        maxLength="30"
                     />
                 </label>
 
@@ -101,6 +102,7 @@ class JobDetails_3 extends Component {
                         value={GREgrade}
                         onChange={handleChange('GREgrade')}
                         placeholder="GRE grades"
+                        maxLength="30"
                     />
                 </label>
 
@@ -122,6 +124,19 @@ class JobDetails_3 extends Component {
                         value={GMATgrade}
                         onChange={handleChange('GMATgrade')}
                         placeholder="GMAT scores"
+                        maxLength="30"
+                    />
+                </label>
+
+                <label>
+                <label>Do you have any specific schools to apply? (write up to 8)</label>
+                    <input
+                        type="text"
+                        name="schoolOfInterest"
+                        value={schoolOfInterest}
+                        onChange={handleChange('schoolOfInterest')}
+                        placeholder="Preffered schools to apply"
+                        maxLength="50"
                     />
                 </label>
 
@@ -133,6 +148,7 @@ class JobDetails_3 extends Component {
                         value={notes}
                         onChange={handleChange('notes')}
                         placeholder="Extra notes?"
+                        maxLength="100"
                     />
                 </label>
 
@@ -147,4 +163,4 @@ class JobDetails_3 extends Component {
     }
 }
 
-export default JobDetails_3;
+export default ApplicantDetails_3;
