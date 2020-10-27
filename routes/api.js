@@ -37,8 +37,7 @@ router.post("/signup", function (req, res) {
     req.session.username = req.body.email
 
     db.User.create({
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
+        name: req.body.name,
         username: req.body.username,
         password: req.body.password
     })

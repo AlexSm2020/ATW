@@ -2,16 +2,27 @@ import React, { Component } from 'react';
 // import { Grid, Cell } from 'react-mdl';
 import logo from "../logo.svg"
 import axios from 'axios';
+import FacebookLogin from 'react-facebook-login';
+
+
+
 
 class Register extends Component {
+
+  // responseFacebook = (response) => {
+  //   console.log("aref44", response);
+  // }
+  
+  // componentClicked = (response) => {
+  //   console.log("aref45", response);
+  // }
 
   // Using constructor to build out Register component class which will be exported to app.js for rendering.
 
   constructor(props) {
     super(props)
     this.state = {
-      firstName: "",
-      lastName: "",
+      name: "",
       email: "",
       password: "",
       redirectTo: ""
@@ -26,8 +37,7 @@ class Register extends Component {
 
   resetUserInputs = () => {
     this.setState({
-      firstName: "",
-      lastName: "",
+      name: "",
       email: "",
       password: "",
       redirecTo: ""
@@ -50,8 +60,7 @@ class Register extends Component {
     event.preventDefault()
 
     const payload = {
-      firstName: this.state.firstName,
-      lastName: this.state.lastName,
+      name: this.state.name,
       username: this.state.email,
       password: this.state.password
     }
@@ -88,26 +97,14 @@ class Register extends Component {
             <div className="d-flex justify-content-center form_container_signup">
               <form className="signup">
                 <div className="form-group">
-                  <label>First Name</label>
+                  <label>Name</label>
                   <input
-                  value={this.state.firstName}
-                  name="firstName"
+                  value={this.state.name}
+                  name="name"
                   onChange={this.handleInputChange}
                   type="text" 
                   className="form-control" 
-                  placeholder="First Name">
-
-                  </input>
-                </div>
-                <div className="form-group">
-                  <label>Last Name</label>
-                  <input
-                  value={this.state.lastName} 
-                  name="lastName"
-                  onChange={this.handleInputChange}
-                  type="text" 
-                  className="form-control" 
-                  placeholder="Last Name">
+                  placeholder="Name">
 
                   </input>
                 </div>
@@ -136,6 +133,12 @@ class Register extends Component {
                   </input>
                 </div>
                 <button onClick={this.handleFormSubmit} className="btn btn-primary signup_btn">Sign Up</button>
+                {/* <FacebookLogin
+                appId="1300245996979132"
+                autoLoad={true}
+                fields="name,email,picture"
+                onClick={this.componentClicked}
+                callback={this.responseFacebook} /> */}
               </form>
             </div>
             <div className="mt-4">

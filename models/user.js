@@ -13,10 +13,7 @@ var validateEmail = function (email) {
 
 // User schema - setting up our data schema for adding users to database.
 const UserSchema = new Schema({
-    firstName: {
-        type: String
-    },
-    lastName: {
+    name: {
         type: String
     },
     username: {

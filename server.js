@@ -21,7 +21,7 @@ const options = {
     family: 4
 };
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/job_search'
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/university_db'
 
 // Step 2
 mongoose.set('useFindAndModify', false);
